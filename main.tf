@@ -21,7 +21,7 @@ module "eks" {
 
   vpc_id                   = "vpc-0e049b3a4bd71e6fd"
   subnet_ids               = ["subnet-0b97e185c8160f34d", "subnet-0427e090579f65b1f", "subnet-0d4b3adce00cd3ce2"]
-  control_plane_subnet_ids = ["subnet-08d1aa5f5b38b2cf6","subnet-0d4676bd4c1f43178","subnet-091691e130ecfd4c1"]
+  control_plane_subnet_ids = ["subnet-0d4676bd4c1f43178","subnet-091691e130ecfd4c1"]
 
   # Self Managed Node Group(s)
   self_managed_node_group_defaults = {
@@ -62,7 +62,7 @@ module "eks" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-    instance_types = ["m6i.large", "m5.large", "m5n.large", "m5zn.large"]
+    instance_types = ["t2.micro", "t2.micro", "t2.micro", "t2.micro"]
   }
 
   eks_managed_node_groups = {

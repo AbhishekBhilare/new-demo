@@ -62,7 +62,7 @@ module "eks" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-    instance_types = ["t2.micro"]
+    instance_types = ["t2.micro" , "m5.large", "m5n.large", "m5zn.large"]
   }
 
   eks_managed_node_groups = {
